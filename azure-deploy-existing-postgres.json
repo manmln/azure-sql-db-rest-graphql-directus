@@ -4,30 +4,30 @@
 	"parameters": {
 		"location": {
 			"type": "string",
-			"defaultValue": "WestUS2"
+			"defaultValue": "EastUS"
 		},
 		"databaseAdministratorLogin": {
 			"type": "string",
 			"metadata": {
-				"description": "Azure SQL Database user name"
+				"description": "Azure PostgreSQL Database user name"
 			}
 		},
 		"databaseAdministratorLoginPassword": {
 			"type": "secureString",
 			"metadata": {
-				"description": "Azure SQL Database user password"
+				"description": "Azure PostgreSQL Database user password"
 			}
 		},
 		"databaseName": {
 			"type": "string",			
 			"metadata": {
-				"description": "Azure SQL Database"
+				"description": "Azure PostgreSQL Database"
 			}
 		},
 		"databaseServer": {
 			"type": "string",			
 			"metadata": {
-				"description": "Azure SQL Database Server"
+				"description": "Azure PostgreSQL Database Server"
 			}
 		},
 		"directusAdministratorEmail": {
@@ -161,7 +161,7 @@
 					},
 					{
 						"name": "DB_CLIENT",
-						"value": "mssql"
+						"value": "pg"
 					},
 					{
 						"name": "DB_HOST",
@@ -169,7 +169,7 @@
 					},
 					{
 						"name": "DB_PORT",
-						"value": 1433
+						"value": 5432
 					},
 					{
 						"name": "DB_DATABASE",
@@ -182,10 +182,6 @@
 					{
 						"name": "DB_PASSWORD",
 						"value": "[parameters('databaseAdministratorLoginPassword')]"
-					},
-					{
-						"name": "DB_OPTIONS__ENCRYPT",
-						"value": "true"
 					},
 					{
 						"name": "STORAGE_LOCATIONS",
@@ -379,7 +375,7 @@
 			"properties": {
 				"defaultEncryptionScope": "$account-encryption-key",
 				"denyEncryptionScopeOverride": false,
-				"publicAccess": "None"
+				"publicAccess": "Container"
 			}
 		}
 	],
