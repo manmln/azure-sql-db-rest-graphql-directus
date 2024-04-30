@@ -168,19 +168,19 @@
 					},
 					{
 						"name": "DB_CLIENT",
-						"value": "mssql"
+						"value": "pg"
 					},
 					{
 						"name": "DB_HOST",
-						"value": "[concat(parameters('databaseServer'), '.database.windows.net')]"
+						"value": "[parameters('databaseServer')]"
 					},
 					{
 						"name": "DB_PORT",
-						"value": 1433
+						"value": 5432
 					},
 					{
 						"name": "DB_DATABASE",
-						"value": "directus2"
+						"value": "[parameters('databaseName')]"
 					},
 					{
 						"name": "DB_USER",
@@ -189,10 +189,6 @@
 					{
 						"name": "DB_PASSWORD",
 						"value": "[parameters('databaseAdministratorLoginPassword')]"
-					},
-					{
-						"name": "DB_OPTIONS__ENCRYPT",
-						"value": "true"
 					},
 					{
 						"name": "STORAGE_LOCATIONS",
