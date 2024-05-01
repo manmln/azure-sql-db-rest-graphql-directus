@@ -71,7 +71,7 @@
 	"resources": [
 		{
 			"type": "Microsoft.Sql/servers",
-			"apiVersion": "2021-02-01-preview",
+			"apiVersion": "2023-05-01-preview",
 			"name": "[parameters('databaseServer')]",
 			"location": "[parameters('location')]",
 			"kind": "v12.0",
@@ -86,8 +86,8 @@
 		},
 		{
 			"type": "Microsoft.Sql/servers/databases",
-			"apiVersion": "2021-02-01-preview",
-			"name": "[concat(parameters('databaseServer'), '/directus2')]",
+			"apiVersion": "2023-05-01-preview",
+			"name": "[concat(parameters('databaseServer'), '/directus')]",
 			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Sql/servers', parameters('databaseServer'))]"
@@ -113,7 +113,7 @@
 		},
 		{
 			"type": "Microsoft.Sql/servers/firewallRules",
-			"apiVersion": "2021-02-01-preview",
+			"apiVersion": "2023-05-01-preview",
 			"name": "[concat(parameters('databaseServer'), '/AllowAllWindowsAzureIps')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Sql/servers', parameters('databaseServer'))]"
@@ -222,7 +222,7 @@
 					},
 					{
 						"name": "DB_DATABASE",
-						"value": "directus2"
+						"value": "directus"
 					},
 					{
 						"name": "DB_USER",
