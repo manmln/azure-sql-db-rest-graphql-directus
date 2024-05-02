@@ -140,7 +140,7 @@
                 "hyperV": false,
                 "siteConfig": {
                     "numberOfWorkers": 1,
-                    "linuxFxVersion": "DOCKER|directus/directus:10.9.2",
+                    "linuxFxVersion": "DOCKER|directus/directus:10.10.7",
                     "alwaysOn": false,
                     "http20Enabled": false
                 },
