@@ -35,6 +35,7 @@
 		},
 		"directusAdministratorPassword": {
 			"type": "secureString",
+			"defaultValue": "AzUR3SqL_PAzzw0rd!",
 			"metadata": {
 				"description": "Directus administrative account password"
 			}
